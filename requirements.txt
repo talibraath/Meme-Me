@@ -1,0 +1,12 @@
+openai-whisper
+language-tool-python
+whisper
+openai
+pydub
+gTTS
+python-dotenv==0.20.0
+ffmpeg-python==0.2.0
+streamlit
+torch
+requests
+Pillow
