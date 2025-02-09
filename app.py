@@ -66,7 +66,7 @@ def transcribe_audio(audio_file):
 
 transcription = None
 
-st.title("AI Voice Meme Generator")
+st.title("AI Meme Generator")
 st.write("Record or upload an audio clip, let AI generate a funny meme caption, and create your meme!")
 audio_file = st.file_uploader("Upload your voice recording (in mp3 or wav format)", type=['mp3', 'wav'])
 
