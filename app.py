@@ -64,12 +64,12 @@ def transcribe_audio(audio_file):
     return result['text']
 
 
+transcription = None
 
 st.title("AI Voice Meme Generator")
 st.write("Record or upload an audio clip, let AI generate a funny meme caption, and create your meme!")
 audio_file = st.file_uploader("Upload your voice recording (in mp3 or wav format)", type=['mp3', 'wav'])
 
-transcription = None
 
 if audio_file:
     transcription = transcribe_audio(audio_file) 
@@ -89,7 +89,8 @@ if audio_value:
 st.write("OR")
 
 # Get the user's meme caption
-transcription = st.text_input("Enter your meme caption:")
+if not transcription:
+    transcription = st.text_input("Enter your meme caption:")
 
 
 if transcription:
