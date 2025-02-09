@@ -86,7 +86,6 @@ if audio_value:
     transcription = result["text"]
     st.write(transcription)
     os.remove(temp_audio_path)
-st.write("OR")
 
 
 if transcription:
