@@ -88,14 +88,10 @@ if audio_value:
     os.remove(temp_audio_path)
 st.write("OR")
 
-# Get the user's meme caption
-if not transcription:
-    transcription = st.text_input("Enter your meme caption:")
-
 
 if transcription:
     if st.button("Generate Meme Caption"):
-        prompt = f"Generate a funny meme caption for the following text:\n\n{transcription}\n\nMeme Caption:"
+        prompt = f"Generate a funny meme images for the following text and it has be humorous:\n\n{transcription}\n\n Meme Caption:"
         with st.spinner("Generating Image..."):
             response = openai.images.generate(
                 model="dall-e-3",
