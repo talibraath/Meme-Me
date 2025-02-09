@@ -8,6 +8,12 @@ import openai
 from PIL import Image, ImageDraw, ImageFont
 import requests
 
+load_dotenv()
+# Set your OpenAI API key (replace with your actual key or set via your .env file)
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+
+
 # Streamlit app layout
 st.logo(
     "logo.png",
@@ -27,9 +33,6 @@ def download_image(url):
 
 
 
-load_dotenv()
-# Set your OpenAI API key (replace with your actual key or set via your .env file)
-openai.api_key = os.getenv("OPENAI_API_KEY", "your")
 
 @st.cache_resource
 def load_whisper_model():
